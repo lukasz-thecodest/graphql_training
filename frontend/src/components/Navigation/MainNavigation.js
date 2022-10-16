@@ -26,6 +26,17 @@ const mainNavigation = () => (
                   <NavLink to={"/bookings"}>Bookings</NavLink>
                 </li>
               )}
+              {context.token ? (
+                <li>
+                  <button className=""
+                    onClick={context.logout}
+                  >
+                    Logout
+                  </button>
+                </li>
+              ) : (
+                <li></li>
+              )}
             </ul>
           </nav>
         </header>

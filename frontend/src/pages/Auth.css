@@ -7,7 +7,20 @@
 .form-control input {
   width: 100%;
   display: block;
+  color: var(--text-on-primary);
 }
+
+.form-control input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--primary);
+}
+
+.form-control input:focus {
+  border: none;
+  border-bottom: 1px solid var(--primary-dark);
+}
+
 .form-control {
   margin-bottom: 1rem;
 }
@@ -17,19 +30,21 @@
 }
 
 .form-actions button {
-  background-color: #01d1d1;
+  background-color: var(--secondary);
   font: inherit;
-  border: 1px solid #01d1d1;
+  border: 1px solid var(--secondary);
   border-radius: 3px;
   padding: 0.25rem 1rem;
   margin-right: 1rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
-  color: white;
+  color: var(--text-on-primary);
   cursor: pointer;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
 }
 
 .form-actions button:hover,
 .form-actions button:active {
-  background-color: #01a7a7;
-  border-color: #01a7a7;
+  background-color: var(--secondary-dark);
+  border-color: var(--secondary-dark);
 }
